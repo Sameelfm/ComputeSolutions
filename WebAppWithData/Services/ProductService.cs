@@ -12,7 +12,7 @@ namespace WebAppWithData.Services
         }
         private SqlConnection GetConnectionString()
         {
-            return new SqlConnection(_configuration.GetConnectionString("SQLConnection"));
+            return new SqlConnection(_configuration["SQLConnection"]);
         }
 
         public List<Product> GetProducts()
